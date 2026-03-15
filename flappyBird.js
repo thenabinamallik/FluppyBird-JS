@@ -55,15 +55,21 @@ const fly = new Audio("sounds/faaah.mp3");
 const hit = new Audio("sounds/ma-ka-bhosda-aag.mp3");
 
 // ---------- INPUT ----------
+function jump() {
+  BIRD.y -= BIRD.jump;
+  fly.currentTime = 0;
+  fly.play();
+}
 
 document.addEventListener("keydown", (e) => {
   if (e.code === "Space") {
-    BIRD.y -= BIRD.jump;
-    fly.currentTime = 0; 
-    fly.play();
+    jump();
   }
 });
 
+document.addEventListener("touchstart", () => {
+  jump();
+});
 // ---------- PIPES ----------
 
 let pipes = [
