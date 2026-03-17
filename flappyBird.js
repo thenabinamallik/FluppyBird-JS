@@ -24,8 +24,8 @@ const GAME = {
 const BIRD = {
   x: cvs.width * 0.2,
   y: cvs.height * 0.4,
-  width: 50,
-  height: 50,
+  width: 100,
+  height: 70,
   jump: 35,
 };
 
@@ -52,7 +52,7 @@ pipeSouth.src = "images/image.png";
 
 const fly = new Audio("sounds/faaah.mp3");
 // const scoreSound = new Audio("sounds/score.mp3");
-const hit = new Audio("sounds/ma-ka-bhosda-aag.mp3");
+const hit = new Audio("sounds/meri-jung-emotional.mp3");
 
 // ---------- INPUT ----------
 function jump() {
